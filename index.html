@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СтройРемонт — ремонт и строительство под ключ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=6">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<svg style="position:absolute; width:0; height:0" aria-hidden="true">
+  <symbol id="icon-star" viewBox="0 0 20 20">
+    <path d="M10 1 L12.5 7 L19 7.5 L14 12 L15.5 19 L10 15.5 L4.5 19 L6 12 L1 7.5 L7.5 7 Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<nav class="side-nav" data-side-nav aria-label="Разделы страницы">
+  <a href="#services" data-side-link="services"><span class="side-nav__num">01</span><span class="side-nav__label">Услуги</span></a>
+  <a href="#compare" data-side-link="compare"><span class="side-nav__num">02</span><span class="side-nav__label">До/После</span></a>
+  <a href="#portfolio" data-side-link="portfolio"><span class="side-nav__num">03</span><span class="side-nav__label">Портфолио</span></a>
+  <a href="#process" data-side-link="process"><span class="side-nav__num">04</span><span class="side-nav__label">Этапы</span></a>
+  <a href="#reviews" data-side-link="reviews"><span class="side-nav__num">05</span><span class="side-nav__label">Отзывы</span></a>
+  <a href="#contacts" data-side-link="contacts"><span class="side-nav__num">06</span><span class="side-nav__label">Контакты</span></a>
+</nav>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="#" class="logo" data-magnetic>Строй<span>Ремонт</span></a>
+    <nav class="nav">
+      <a href="#services">Услуги</a>
+      <a href="#compare">До/После</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#process">Этапы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a href="#contacts" class="btn btn--small" data-magnetic>Оставить заявку</a>
+    <button class="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ХИРО: полноэкранное фото, скролл превращает "до" в "после" -->
+  <section class="hero-scroll" data-hero-scroll>
+    <div class="hero-pin">
+      <div class="hero__bg">
+        <img class="hero__bg-img hero__bg-img--before" src="assets/img/real-before.jpg?v=3" alt="Квартира до ремонта">
+        <img class="hero__bg-img hero__bg-img--after" src="assets/img/real-after.jpg?v=3" alt="Квартира после ремонта" data-hero-after>
+        <div class="hero__wipe-divider" data-hero-divider></div>
+        <div class="hero__scrim"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow" data-reveal>// Демонстрационный сайт-портфолио</p>
+          <h1 class="hero-heading" data-reveal>
+            <span class="heading-line">Ремонт под ключ,</span>
+            <span class="heading-line heading-line--marked">который видно сразу</span>
+          </h1>
+          <p class="hero__lead" data-reveal>
+            Листайте вниз — это фото одной и той же квартиры. Так же честно
+            выглядит и результат на объекте: без макетов, без обещаний.
+          </p>
+          <div class="hero__actions" data-reveal>
+            <a href="#compare" class="btn" data-magnetic>Смотреть до/после</a>
+            <a href="#contacts" class="btn btn--ghost" data-magnetic>Рассчитать смету</a>
+          </div>
+          <div class="hero__stats" data-reveal>
+            <div><strong data-count="120" data-suffix="+">0</strong><span>объектов сдано</span></div>
+            <div><strong data-count="7" data-suffix=" лет">0</strong><span>на рынке</span></div>
+            <div><strong data-count="30" data-suffix=" дней">0</strong><span>средний ремонт</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>скролл</span>
+        <svg viewBox="0 0 16 24"><path d="M8 1 V21 M2 15 L8 21 L14 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- УСЛУГИ -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title" data-reveal><span class="section-title__index">01</span> <span class="section-title__text">Что мы делаем</span></h2>
+      <p class="section-lead" data-reveal>Полный цикл ремонтно-строительных работ — от планировки до финальной уборки.</p>
+      <div class="services__list">
+        <a href="#contacts" class="service-row" data-reveal>
+          <span class="service-row__num">01</span>
+          <h3 class="service-row__title">Ремонт квартир</h3>
+          <p class="service-row__desc">Косметический, капитальный и дизайнерский ремонт любой сложности.</p>
+          <span class="service-row__icon">
+            <svg viewBox="0 0 48 48"><path d="M6 42 L20 12 L28 12 L42 42 Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 30 L34 30" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </span>
+        </a>
+        <a href="#contacts" class="service-row" data-reveal>
+          <span class="service-row__num">02</span>
+          <h3 class="service-row__title">Перепланировка</h3>
+          <p class="service-row__desc">Согласование и снос стен, объединение помещений, узаконивание.</p>
+          <span class="service-row__icon">
+            <svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M8 20 H40 M20 8 V40" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </span>
+        </a>
+        <a href="#contacts" class="service-row" data-reveal>
+          <span class="service-row__num">03</span>
+          <h3 class="service-row__title">Ремонт под ключ</h3>
+          <p class="service-row__desc">Фиксированный срок и смета — заезжаете в готовую квартиру.</p>
+          <span class="service-row__icon">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M24 14 V24 L31 29" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </span>
+        </a>
+        <a href="#contacts" class="service-row" data-reveal>
+          <span class="service-row__num">04</span>
+          <h3 class="service-row__title">Отделка фасадов</h3>
+          <p class="service-row__desc">Утепление, штукатурка, облицовка — внешний вид дома и балконов.</p>
+          <span class="service-row__icon">
+            <svg viewBox="0 0 48 48"><path d="M8 40 L8 24 L24 10 L40 24 L40 40 Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="19" y="28" width="10" height="12" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </span>
+        </a>
+        <a href="#contacts" class="service-row" data-reveal>
+          <span class="service-row__num">05</span>
+          <h3 class="service-row__title">Дизайн-проект</h3>
+          <p class="service-row__desc">Планировка, 3D-визуализация, подбор материалов и мебели.</p>
+          <span class="service-row__icon">
+            <svg viewBox="0 0 48 48"><path d="M12 10 L36 10 L36 38 L12 38 Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M18 18 H30 M18 25 H30 M18 32 H24" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </span>
+        </a>
+        <a href="#contacts" class="service-row" data-reveal>
+          <span class="service-row__num">06</span>
+          <h3 class="service-row__title">Гарантия</h3>
+          <p class="service-row__desc">Официальный договор и гарантия на все виды работ до 3 лет.</p>
+          <span class="service-row__icon">
+            <svg viewBox="0 0 48 48"><path d="M24 6 L40 14 V26 C40 34 33 40 24 42 C15 40 8 34 8 26 V14 Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ДО/ПОСЛЕ -->
+  <section id="compare" class="compare-section">
+    <div class="container">
+      <h2 class="section-title" data-reveal><span class="section-title__index">02</span> <span class="section-title__text">До и после</span></h2>
+      <p class="section-lead" data-reveal>Потяните за ползунок, чтобы увидеть трансформацию, и листайте объекты стрелками или превью снизу.</p>
+
+      <div class="compare-carousel" data-carousel tabindex="0">
+        <button class="carousel-arrow carousel-arrow--prev" data-carousel-prev aria-label="Предыдущий объект" data-magnetic>
+          <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track" data-carousel-track>
+
+            <div class="carousel-slide">
+              <div class="compare compare--large" data-compare>
+                <img src="assets/img/real-after.jpg?v=3" alt="Гостиная после ремонта, реальное фото" class="compare__after">
+                <div class="compare__before-wrap">
+                  <img src="assets/img/real-before.jpg?v=3" alt="Гостиная до ремонта, реальное фото" class="compare__before">
+                </div>
+                <div class="compare__divider"></div>
+                <input type="range" min="0" max="100" value="50" class="compare__range" aria-label="Слайдер до/после: гостиная, реальное фото">
+              </div>
+              <div class="carousel-slide__info">
+                <h3>Гостиная, 20 м²</h3>
+                <p>Пример с реальными фото объекта — полная перепланировка и отделка под ключ.</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="compare compare--large" data-compare>
+                <img src="assets/img/kitchen-after.jpg" alt="Кухня после ремонта" class="compare__after" loading="lazy">
+                <div class="compare__before-wrap">
+                  <img src="assets/img/kitchen-before.jpg" alt="Кухня до ремонта" class="compare__before" loading="lazy">
+                </div>
+                <div class="compare__divider"></div>
+                <input type="range" min="0" max="100" value="50" class="compare__range" aria-label="Слайдер до/после: кухня">
+              </div>
+              <div class="carousel-slide__info">
+                <h3>Кухня, 9 м²</h3>
+                <p>Полная замена гарнитура, плитки и освещения. Срок — 12 дней.</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="compare compare--large" data-compare>
+                <img src="assets/img/bathroom-after.jpg" alt="Ванная после ремонта" class="compare__after" loading="lazy">
+                <div class="compare__before-wrap">
+                  <img src="assets/img/bathroom-before.jpg" alt="Ванная до ремонта" class="compare__before" loading="lazy">
+                </div>
+                <div class="compare__divider"></div>
+                <input type="range" min="0" max="100" value="50" class="compare__range" aria-label="Слайдер до/после: ванная">
+              </div>
+              <div class="carousel-slide__info">
+                <h3>Санузел, 4 м²</h3>
+                <p>Замена труб, гидроизоляция, плитка и душевая кабина. Срок — 9 дней.</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="compare compare--large" data-compare>
+                <img src="assets/img/bedroom-after.jpg" alt="Спальня после ремонта" class="compare__after" loading="lazy">
+                <div class="compare__before-wrap">
+                  <img src="assets/img/bedroom-before.jpg" alt="Спальня до ремонта" class="compare__before" loading="lazy">
+                </div>
+                <div class="compare__divider"></div>
+                <input type="range" min="0" max="100" value="50" class="compare__range" aria-label="Слайдер до/после: спальня">
+              </div>
+              <div class="carousel-slide__info">
+                <h3>Спальня, 14 м²</h3>
+                <p>Выравнивание стен, шумоизоляция, паркет и свет. Срок — 11 дней.</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="compare compare--large" data-compare>
+                <img src="assets/img/hallway-after.jpg" alt="Прихожая после ремонта" class="compare__after" loading="lazy">
+                <div class="compare__before-wrap">
+                  <img src="assets/img/hallway-before.jpg" alt="Прихожая до ремонта" class="compare__before" loading="lazy">
+                </div>
+                <div class="compare__divider"></div>
+                <input type="range" min="0" max="100" value="50" class="compare__range" aria-label="Слайдер до/после: прихожая">
+              </div>
+              <div class="carousel-slide__info">
+                <h3>Прихожая, 6 м²</h3>
+                <p>Встроенный шкаф, новая дверь, плитка. Срок — 7 дней.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel-arrow carousel-arrow--next" data-carousel-next aria-label="Следующий объект" data-magnetic>
+          <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="carousel-thumbs" data-carousel-thumbs>
+        <button class="carousel-thumb is-active" data-carousel-goto="0">
+          <img src="assets/img/real-after.jpg?v=3" alt="" loading="lazy"><span>Гостиная</span>
+        </button>
+        <button class="carousel-thumb" data-carousel-goto="1">
+          <img src="assets/img/kitchen-after.jpg" alt="" loading="lazy"><span>Кухня</span>
+        </button>
+        <button class="carousel-thumb" data-carousel-goto="2">
+          <img src="assets/img/bathroom-after.jpg" alt="" loading="lazy"><span>Санузел</span>
+        </button>
+        <button class="carousel-thumb" data-carousel-goto="3">
+          <img src="assets/img/bedroom-after.jpg" alt="" loading="lazy"><span>Спальня</span>
+        </button>
+        <button class="carousel-thumb" data-carousel-goto="4">
+          <img src="assets/img/hallway-after.jpg" alt="" loading="lazy"><span>Прихожая</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПОРТФОЛИО -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="section-title" data-reveal><span class="section-title__index">03</span> <span class="section-title__text">Портфолио проектов</span></h2>
+      <p class="section-lead" data-reveal>Несколько последних объектов — от точечного ремонта до полной реконструкции.</p>
+      <div class="portfolio__grid" data-gallery>
+        <button type="button" class="portfolio-item portfolio-item--featured" data-reveal data-tilt>
+          <img src="assets/img/portfolio-living.jpg" alt="Гостиная после ремонта" loading="lazy">
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__tag">Гостиная</span>
+            <h3>24 м² · 18 дней</h3>
+          </div>
+        </button>
+        <button type="button" class="portfolio-item" data-reveal data-tilt>
+          <img src="assets/img/portfolio-kitchen.jpg" alt="Кухня, современный ремонт" loading="lazy">
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__tag">Кухня</span>
+            <h3>11 м² · 14 дней</h3>
+          </div>
+        </button>
+        <button type="button" class="portfolio-item" data-reveal data-tilt>
+          <img src="assets/img/portfolio-bathroom.jpg" alt="Санузел после ремонта" loading="lazy">
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__tag">Санузел</span>
+            <h3>5 м² · 10 дней</h3>
+          </div>
+        </button>
+        <button type="button" class="portfolio-item" data-reveal data-tilt>
+          <img src="assets/img/portfolio-hallway.jpg" alt="Прихожая после ремонта" loading="lazy">
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__tag">Прихожая</span>
+            <h3>7 м² · 8 дней</h3>
+          </div>
+        </button>
+        <button type="button" class="portfolio-item" data-reveal data-tilt>
+          <img src="assets/img/portfolio-facade.jpg" alt="Фасад дома" loading="lazy">
+          <div class="portfolio-item__overlay">
+            <span class="portfolio-item__tag">Фасад</span>
+            <h3>140 м² · 21 день</h3>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЭТАПЫ -->
+  <section id="process" class="process">
+    <div class="container">
+      <h2 class="section-title" data-reveal><span class="section-title__index">04</span> <span class="section-title__text">Как проходит работа</span></h2>
+      <div class="process__grid">
+        <div class="process-step" data-reveal data-tilt>
+          <div class="process-step__node">01</div>
+          <div class="process-step__icon">
+            <svg viewBox="0 0 48 48"><circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="3.5"/><line x1="29" y1="29" x2="40" y2="40" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Замер и консультация</h3>
+          <p>Выезжаем на объект, обсуждаем пожелания и бюджет — бесплатно.</p>
+        </div>
+        <div class="process-step" data-reveal data-tilt>
+          <div class="process-step__node">02</div>
+          <div class="process-step__icon">
+            <svg viewBox="0 0 48 48"><rect x="12" y="6" width="24" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="3.5"/><line x1="18" y1="17" x2="30" y2="17" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><line x1="18" y1="25" x2="30" y2="25" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><line x1="18" y1="33" x2="26" y2="33" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Смета и договор</h3>
+          <p>Фиксируем стоимость и сроки в договоре — без скрытых доплат.</p>
+        </div>
+        <div class="process-step" data-reveal data-tilt>
+          <div class="process-step__node">03</div>
+          <div class="process-step__icon">
+            <svg viewBox="0 0 48 48"><rect x="6" y="10" width="22" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M28 15 H37 V38" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="31" y1="38" x2="43" y2="38" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Ремонт</h3>
+          <p>Работаем по графику, присылаем фотоотчёты на каждом этапе.</p>
+        </div>
+        <div class="process-step" data-reveal data-tilt>
+          <div class="process-step__node">04</div>
+          <div class="process-step__icon">
+            <svg viewBox="0 0 48 48"><circle cx="15" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="3.5"/><line x1="23" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><line x1="33" y1="24" x2="33" y2="31" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><line x1="40" y1="24" x2="40" y2="33" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Сдача объекта</h3>
+          <p>Приёмка с чек-листом, устраняем замечания, даём гарантию.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <h2 class="section-title" data-reveal><span class="section-title__index">05</span> <span class="section-title__text">Отзывы клиентов</span></h2>
+      <div class="reviews__grid">
+        <div class="review-card" data-reveal data-tilt>
+          <div class="review-card__rating">
+            <svg class="stars" viewBox="0 0 108 20" aria-label="Оценка 5 из 5">
+              <use href="#icon-star" x="0" width="20" height="20"/><use href="#icon-star" x="22" width="20" height="20"/><use href="#icon-star" x="44" width="20" height="20"/><use href="#icon-star" x="66" width="20" height="20"/><use href="#icon-star" x="88" width="20" height="20"/>
+            </svg>
+            <span class="review-card__source">Яндекс Услуги</span>
+          </div>
+          <p class="review-card__text">«Сделали ремонт кухни за 12 дней, как и обещали. Уложились в смету, каждый день присылали фото прогресса».</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">МИ</div>
+            <div><strong>Марина И.</strong><span>Кухня, 9 м²</span></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal data-tilt>
+          <div class="review-card__rating">
+            <svg class="stars" viewBox="0 0 108 20" aria-label="Оценка 5 из 5">
+              <use href="#icon-star" x="0" width="20" height="20"/><use href="#icon-star" x="22" width="20" height="20"/><use href="#icon-star" x="44" width="20" height="20"/><use href="#icon-star" x="66" width="20" height="20"/><use href="#icon-star" x="88" width="20" height="20"/>
+            </svg>
+            <span class="review-card__source">Яндекс Услуги</span>
+          </div>
+          <p class="review-card__text">«Меняли всю сантехнику и плитку в санузле. Отдельное спасибо за аккуратность — соседей не залили ни разу».</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">ДК</div>
+            <div><strong>Денис К.</strong><span>Санузел, 4 м²</span></div>
+          </div>
+        </div>
+        <div class="review-card" data-reveal data-tilt>
+          <div class="review-card__rating">
+            <svg class="stars" viewBox="0 0 108 20" aria-label="Оценка 5 из 5">
+              <use href="#icon-star" x="0" width="20" height="20"/><use href="#icon-star" x="22" width="20" height="20"/><use href="#icon-star" x="44" width="20" height="20"/><use href="#icon-star" x="66" width="20" height="20"/><use href="#icon-star" x="88" width="20" height="20"/>
+            </svg>
+            <span class="review-card__source">Яндекс Услуги</span>
+          </div>
+          <p class="review-card__text">«Ремонт всей квартиры под ключ — от демонтажа до расстановки мебели. Результат превзошёл ожидания».</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar">ЕС</div>
+            <div><strong>Елена С.</strong><span>2-комн. квартира, 54 м²</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ / ФОРМА -->
+  <section id="contacts" class="contacts">
+    <div class="container contacts__inner">
+      <div class="contacts__info" data-reveal>
+        <h2 class="section-title" style="text-align:left; margin-left:0"><span class="section-title__index">06</span> <span class="section-title__text">Оставить заявку</span></h2>
+        <p class="section-lead" style="text-align:left; margin-left:0">Оставьте контакты — перезвоним и рассчитаем стоимость ремонта в течение дня.</p>
+        <ul class="contacts__list">
+          <li><strong>Телефон:</strong> <span>+7 (900) 000-00-00</span></li>
+          <li><strong>Email:</strong> <span>info@stroyremont.demo</span></li>
+          <li><strong>Город:</strong> <span>работаем по всей области</span></li>
+        </ul>
+        <p class="contacts__note">Это демонстрационный сайт-портфолио, форма ничего не отправляет.</p>
+      </div>
+      <form class="contacts__form" id="leadForm" data-reveal>
+        <label>
+          Имя
+          <input type="text" name="name" placeholder="Как к вам обращаться" required>
+        </label>
+        <label>
+          Телефон
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+        </label>
+        <label>
+          Что нужно сделать
+          <textarea name="message" rows="3" placeholder="Кратко опишите задачу"></textarea>
+        </label>
+        <button type="submit" class="btn btn--full" data-magnetic>Отправить заявку</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#" class="logo" data-magnetic>Строй<span>Ремонт</span></a>
+    <p>© 2026 СтройРемонт. Демонстрационный сайт-портфолио.</p>
+  </div>
+</footer>
+
+<div class="lightbox" data-lightbox hidden>
+  <button type="button" class="lightbox__close" data-lightbox-close aria-label="Закрыть" data-magnetic>
+    <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </button>
+  <button type="button" class="lightbox__arrow lightbox__arrow--prev" data-lightbox-prev aria-label="Предыдущее фото" data-magnetic>
+    <svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="lightbox__stage">
+    <img data-lightbox-img src="" alt="">
+    <div class="lightbox__caption">
+      <span class="lightbox__tag" data-lightbox-tag></span>
+      <h3 data-lightbox-title></h3>
+    </div>
+  </div>
+  <button type="button" class="lightbox__arrow lightbox__arrow--next" data-lightbox-next aria-label="Следующее фото" data-magnetic>
+    <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="lightbox__count" data-lightbox-count></div>
+</div>
+
+<script src="js/script.js?v=4"></script>
+</body>
+</html>
